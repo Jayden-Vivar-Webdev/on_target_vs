@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GALLERY | On Target Varmint Solutions</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="dist/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <script>
+    // Simple JavaScript to toggle mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+</head>
+<body class="bg-black-ops text-theme-colour font-sans overflow-x-hidden">
+  <!-- Night Vision Overlay -->
+  <div class="fixed inset-0 bg-gradient-to-b from-dark-green/10 to-transparent opacity-20 pointer-events-none z-0"></div>
+  
+  <!-- Main Container -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+    
+    <!-- Header -->
+    <header class="flex justify-between items-center py-6 border-b border-theme-colour/30">
+      <div class="text-2xl md:text-2xl lg:text-3xl font-bold font-mono tracking-tighter">
+        <span class="text-theme-colour">On Target</span> <span class="text-white">Varmint Solutions</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-theme-colour/60 hover:text-white transition-all relative group">
+          <span>HOME</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="services.html" class="text-theme-colour/60 hover:text-white transition-all relative group">
+          <span>SERVICES</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#" class="text-theme-colour hover:text-white transition-all relative group">
+          <span>GALLERY</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="contact.html" class="text-theme-colour/60 hover:text-white transition-all relative group">
+          <span>CONTACT</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-theme-colour focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black-ops border-b border-theme-colour/30 pb-4">
+      <div class="flex flex-col space-y-4 px-4">
+        <a href="index.html" class="text-theme-colour/60 hover:text-white py-2 border-b border-theme-colour/20">
+          HOME
+        </a>
+        <a href="services.html" class="text-theme-colour/60 hover:text-white py-2 border-b border-theme-colour/20">
+          SERVICES
+        </a>
+        <a href="#" class="text-theme-colour hover:text-white py-2 border-b border-theme-colour/20">
+          GALLERY
+        </a>
+        <a href="contact.html" class="text-theme-colour/60 hover:text-white py-2">
+          CONTACT
+        </a>
+      </div>
+    </div>
+
+    <!-- Gallery Hero -->
+    <section class="relative py-20 md:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0"></div>
+      <div class="relative z-10 text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold uppercase mb-6 tracking-tighter">
+          <span class="text-white">Tactical</span> <span class="text-theme-colour">Operations</span>
+        </h1>
+        <p class="text-lg md:text-xl text-theme-colour/80 mb-6 leading-relaxed">
+          Field documentation of our <span class="font-bold text-white">night vision</span> and <span class="font-bold text-white">thermal imaging</span> eradication missions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <div class="flex flex-wrap justify-center gap-4 mb-16">
+      <button id="all-missions" class="px-6 py-2 border border-theme-colour/50 text-theme-colour hover:bg-theme-colour/10 uppercase tracking-wider text-sm transition-all">
+        All Missions
+      </button>
+      <button id="night-ops" class="px-6 py-2 border border-theme-colour/50 text-theme-colour hover:bg-theme-colour/10 uppercase tracking-wider text-sm transition-all">
+        Night Ops
+      </button>
+      <button id="thermal-hunts" class="px-6 py-2 border border-theme-colour/50 text-theme-colour hover:bg-theme-colour/10 uppercase tracking-wider text-sm transition-all">
+        Thermal Hunts
+      </button>
+      <button id="prevention-sys" class="px-6 py-2 border border-theme-colour/50 text-theme-colour hover:bg-theme-colour/10 uppercase tracking-wider text-sm transition-all">
+        Prevention Systems
+      </button>
+    </div>
+
+    <section id="all-missions-img" class="">
+        <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <!-- Image 1 -->
+        <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+          <img 
+            src="./assets/img_thermal.jpg" 
+            alt="Thermal hog hunt" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl mb-1">Night Vision Elimination</h3>
+              <p class="text-theme-colour/80 text-sm">Gen 3 NVG operation in Queensland</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image 2 -->
+        <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+          <img 
+            src="https://www.outdoorlife.com/wp-content/uploads/2022/11/Thermal-Feature-2.jpg" 
+            alt="Thermal scope view" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl mb-1">FLIR Thermal Detection</h3>
+              <p class="text-theme-colour/80 text-sm">Identifying targets in dense brush</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image 3 -->
+        <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+          <img 
+            src="./assets/img_wildpig.jpg" 
+            alt="Wild boar damage" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl mb-1">Crop Protection</h3>
+              <p class="text-theme-colour/80 text-sm">Farmland saved from destruction</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image 4 -->
+        <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+          <img 
+            src="./assets/img_supressor.jpg" 
+            alt="Team in field" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl mb-1">Tactical Team Deployment</h3>
+              <p class="text-theme-colour/80 text-sm">Field operatives in action</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image 5 -->
+        <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+          <img 
+            src="./assets/img_pestcontrol.jpg" 
+            alt="Electric fence installation" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl mb-1">Perimeter Defense</h3>
+              <p class="text-theme-colour/80 text-sm">High-voltage deterrent system</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image 6 -->
+        <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+          <img 
+            src="https://assets.cat5.com/images/tactical-experts/how-to-choose-night-vision-optics/how-to-choose-night-vision-optics.jpg" 
+            alt="Night vision scope" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl mb-1">Optics Technology</h3>
+              <p class="text-theme-colour/80 text-sm">Military-grade equipment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="night-ops-img" class="hidden">
+      <!-- Gallery Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      <!-- Image 1 -->
+       
+      <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+        <img 
+          src="https://www.outdoorlife.com/wp-content/uploads/2022/11/Thermal-Feature-2.jpg" 
+          alt="Thermal scope view" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1">FLIR Thermal Detection</h3>
+            <p class="text-theme-colour/80 text-sm">Identifying targets in dense brush</p>
+          </div>
+        </div>
+      </div>
+      <!-- Image 2 -->
+      <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+        <img 
+          src="./assets/img_thermal.jpg" 
+          alt="Thermal hog hunt" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1">Night Vision Elimination</h3>
+            <p class="text-theme-colour/80 text-sm">Gen 3 NVG operation in Queensland</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <!-- Image 3 -->
+      <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+        <img 
+          src="./assets/img_wildpig.jpg" 
+          alt="Wild boar damage" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1">Crop Protection</h3>
+            <p class="text-theme-colour/80 text-sm">Farmland saved from destruction</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 4 -->
+      <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+        <img 
+          src="./assets/img_supressor.jpg" 
+          alt="Team in field" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1">Tactical Team Deployment</h3>
+            <p class="text-theme-colour/80 text-sm">Field operatives in action</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 5 -->
+      <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+        <img 
+          src="./assets/img_pestcontrol.jpg" 
+          alt="Electric fence installation" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1">Perimeter Defense</h3>
+            <p class="text-theme-colour/80 text-sm">High-voltage deterrent system</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 6 -->
+      <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+        <img 
+          src="https://assets.cat5.com/images/tactical-experts/how-to-choose-night-vision-optics/how-to-choose-night-vision-optics.jpg" 
+          alt="Night vision scope" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1">Optics Technology</h3>
+            <p class="text-theme-colour/80 text-sm">Military-grade equipment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="thermal-hunts-img" class="hidden">
+    <!-- Gallery Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+    <!-- Image 1 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="./assets/img_thermal.jpg" 
+        alt="Thermal hog hunt" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">Night Vision Elimination</h3>
+          <p class="text-theme-colour/80 text-sm">Gen 3 NVG operation in Queensland</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Image 2 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="https://www.outdoorlife.com/wp-content/uploads/2022/11/Thermal-Feature-2.jpg" 
+        alt="Thermal scope view" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">FLIR Thermal Detection</h3>
+          <p class="text-theme-colour/80 text-sm">Identifying targets in dense brush</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <!-- Image 4 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="./assets/img_supressor.jpg" 
+        alt="Team in field" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">Tactical Team Deployment</h3>
+          <p class="text-theme-colour/80 text-sm">Field operatives in action</p>
+        </div>
+      </div>
+    </div>
+    <!-- Image 3 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="./assets/img_wildpig.jpg" 
+        alt="Wild boar damage" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">Crop Protection</h3>
+          <p class="text-theme-colour/80 text-sm">Farmland saved from destruction</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Image 5 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="./assets/img_pestcontrol.jpg" 
+        alt="Electric fence installation" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">Perimeter Defense</h3>
+          <p class="text-theme-colour/80 text-sm">High-voltage deterrent system</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Image 6 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="https://assets.cat5.com/images/tactical-experts/how-to-choose-night-vision-optics/how-to-choose-night-vision-optics.jpg" 
+        alt="Night vision scope" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">Optics Technology</h3>
+          <p class="text-theme-colour/80 text-sm">Military-grade equipment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prevention-sys-img" class="hidden">
+  <!-- Gallery Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+
+  
+  <!-- Image 2 -->
+  <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+    <img 
+      src="https://www.outdoorlife.com/wp-content/uploads/2022/11/Thermal-Feature-2.jpg" 
+      alt="Thermal scope view" 
+      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+      <div>
+        <h3 class="text-white font-bold text-xl mb-1">FLIR Thermal Detection</h3>
+        <p class="text-theme-colour/80 text-sm">Identifying targets in dense brush</p>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Image 1 -->
+    <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+      <img 
+        src="./assets/img_thermal.jpg" 
+        alt="Thermal hog hunt" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+        <div>
+          <h3 class="text-white font-bold text-xl mb-1">Night Vision Elimination</h3>
+          <p class="text-theme-colour/80 text-sm">Gen 3 NVG operation in Queensland</p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Image 3 -->
+  <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+    <img 
+      src="./assets/img_wildpig.jpg" 
+      alt="Wild boar damage" 
+      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+      <div>
+        <h3 class="text-white font-bold text-xl mb-1">Crop Protection</h3>
+        <p class="text-theme-colour/80 text-sm">Farmland saved from destruction</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image 4 -->
+  <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+    <img 
+      src="./assets/img_supressor.jpg" 
+      alt="Team in field" 
+      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+      <div>
+        <h3 class="text-white font-bold text-xl mb-1">Tactical Team Deployment</h3>
+        <p class="text-theme-colour/80 text-sm">Field operatives in action</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image 5 -->
+  <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+    <img 
+      src="./assets/img_pestcontrol.jpg" 
+      alt="Electric fence installation" 
+      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+      <div>
+        <h3 class="text-white font-bold text-xl mb-1">Perimeter Defense</h3>
+        <p class="text-theme-colour/80 text-sm">High-voltage deterrent system</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image 6 -->
+  <div class="group relative overflow-hidden border border-theme-colour/20 hover:border-theme-colour/50 transition-all h-80">
+    <img 
+      src="https://assets.cat5.com/images/tactical-experts/how-to-choose-night-vision-optics/how-to-choose-night-vision-optics.jpg" 
+      alt="Night vision scope" 
+      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+      <div>
+        <h3 class="text-white font-bold text-xl mb-1">Optics Technology</h3>
+        <p class="text-theme-colour/80 text-sm">Military-grade equipment</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    
+
+    <!-- Testimonials -->
+    <section class="py-16 border-t border-theme-colour/20">
+      <div class="text-center mb-12">
+        <span class="text-theme-colour uppercase tracking-widest text-sm">Client Testimonials</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-4">What Our <span class="text-theme-colour">Clients Say</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="p-8 border border-theme-colour/20 hover:border-theme-colour/50 transition-all">
+          <div class="text-yellow-400 mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-theme-colour/80 italic mb-6">"These guys saved my farm. After years of wild hog damage, one night operation eliminated the entire sounder. Professional and effective."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-theme-colour/10 rounded-full mr-4"></div>
+            <div>
+              <h4 class="text-white font-bold">John D.</h4>
+              <p class="text-theme-colour/60 text-sm">Queensland Farmer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="p-8 border border-theme-colour/20 hover:border-theme-colour/50 transition-all">
+          <div class="text-yellow-400 mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-theme-colour/80 italic mb-6">"The thermal imaging technology they use is next-level. They cleared our property in two nights—highly recommend for serious pest problems."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-theme-colour/10 rounded-full mr-4"></div>
+            <div>
+              <h4 class="text-white font-bold">Sarah M.</h4>
+              <p class="text-theme-colour/60 text-sm">NSW Landowner</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="p-8 border border-theme-colour/20 hover:border-theme-colour/50 transition-all">
+          <div class="text-yellow-400 mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text-theme-colour/80 italic mb-6">"Their prevention systems actually work. No hogs in 6 months since installation. Worth every dollar for long-term protection."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-theme-colour/10 rounded-full mr-4"></div>
+            <div>
+              <h4 class="text-white font-bold">Robert T.</h4>
+              <p class="text-theme-colour/60 text-sm">Vineyard Owner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-black-ops to-tactical-gray border-y border-theme-colour/20">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          <span class="text-theme-colour">Ready to Eliminate</span> <span class="text-white">Your Pest Problem?</span>
+        </h2>
+        <p class="text-theme-colour/80 mb-8 text-lg">
+          Contact us for a free consultation and tactical assessment of your property.
+        </p>
+        <a href="tel:+18003648736" class="inline-block px-10 py-4 bg-theme-colour text-black-ops font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 shadow-lg shadow-theme-colour/30 hover:shadow-theme-colour/50">
+          <i class="fas fa-phone-alt mr-2"></i> 0422 233 292
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-theme-colour/20">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">On Target Varmint Solutions</h3>
+          <p class="text-theme-colour/60">Specialised wild animal eradication using military tactics and technology.</p>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">SERVICES</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Night Hunts</a></li>
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Thermal Tracking</a></li>
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Prevention</a></li>
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Emergency Dispatch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">CONTACT</h3>
+          <ul class="space-y-2">
+            <li class="text-theme-colour/60">0424428932</li>
+            <li class="text-theme-colour/60">contact@onvarminsolutions.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">FOLLOW US</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-theme-colour/60 hover:text-theme-colour text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/on_targetvarmintsolutions?igsh=d2VjOWVxdjl1anZk" class="text-theme-colour/60 hover:text-theme-colour text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-theme-colour/40 text-sm">
+        <a href="https://nexawebdev.com">
+          © 2023 POWERED BY NEXA WEB. ALL RIGHTS RESERVED.
+        </a>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <script>
+    const missions = document.getElementById('all-missions');
+    const nightOps = document.getElementById('night-ops');
+    const thermalOps = document.getElementById('thermal-hunts');
+    const prevention = document.getElementById('prevention-sys');
+    
+    const missionsImg = document.getElementById('all-missions-img');
+    const nightOpsImg = document.getElementById('night-ops-img');
+    const thermalOpsImg = document.getElementById('thermal-hunts-img');
+    const preventionImg = document.getElementById('prevention-sys-img');
+    
+    // Set initial state (show all missions by default)
+    missions.classList.add('active-btn');
+    missionsImg.classList.remove('hidden');
+    
+    function addListener(id_element) {
+        id_element.addEventListener('click', () => {
+            // Hide all images first
+            missionsImg.classList.add('hidden');
+            nightOpsImg.classList.add('hidden');
+            thermalOpsImg.classList.add('hidden');
+            preventionImg.classList.add('hidden');
+    
+            // Remove active class from all buttons
+            missions.classList.remove('active-btn');
+            nightOps.classList.remove('active-btn');
+            thermalOps.classList.remove('active-btn');
+            prevention.classList.remove('active-btn');
+    
+            // Add active class to clicked button and show corresponding section
+            if (id_element.id === 'all-missions') {
+                missionsImg.classList.remove('hidden');
+                missions.classList.add('active-btn');
+            } else if (id_element.id === 'night-ops') {
+                nightOpsImg.classList.remove('hidden');
+                nightOps.classList.add('active-btn');
+            } else if (id_element.id === 'thermal-hunts') {
+                thermalOpsImg.classList.remove('hidden');
+                thermalOps.classList.add('active-btn');
+            } else if (id_element.id === 'prevention-sys') {
+                preventionImg.classList.remove('hidden');
+                prevention.classList.add('active-btn');
+            }
+        });
+    }
+    
+    // Add listeners to the elements
+    addListener(missions);
+    addListener(nightOps);
+    addListener(thermalOps);
+    addListener(prevention);
+    </script>
+
+    <style>
+      /* Button active state */
+.active-btn {
+    background-color: #39ff14 !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    border: none !important;
+}
+    </style>
+</body>
+</html>
+

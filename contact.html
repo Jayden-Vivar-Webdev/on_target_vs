@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT | On Target Varmint Solutions</title>
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <script>
+    // Simple JavaScript to toggle mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+</head>
+<body class="bg-black-ops text-theme-colour font-sans overflow-x-hidden">
+  <!-- Night Vision Overlay -->
+  <div class="fixed inset-0 bg-gradient-to-b from-dark-green/10 to-transparent opacity-20 pointer-events-none z-0"></div>
+  
+  <!-- Main Container -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+    
+    <!-- Header -->
+    <header class="flex justify-between items-center py-6 border-b border-theme-colour/30">
+      <div class="text-2xl md:text-2xl lg:text-3xl font-bold font-mono tracking-tighter">
+        <span class="text-theme-colour">On Target</span> <span class="text-white">Varmint Solutions</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-theme-colour/60 hover:text-white transition-all relative group">
+          <span>HOME</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="services.html" class="text-theme-colour/60 hover:text-white transition-all relative group">
+          <span>SERVICES</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="gallery.html" class="text-theme-colour/60 hover:text-white transition-all relative group">
+          <span>GALLERY</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#" class="text-theme-colour hover:text-white transition-all relative group">
+          <span>CONTACT</span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-colour group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-theme-colour focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black-ops border-b border-theme-colour/30 pb-4">
+      <div class="flex flex-col space-y-4 px-4">
+        <a href="./index.html" class="text-theme-colour/60 hover:text-white py-2 border-b border-theme-colour/20">
+          HOME
+        </a>
+        <a href="services.html" class="text-theme-colour/60 hover:text-white py-2 border-b border-theme-colour/20">
+          SERVICES
+        </a>
+        <a href="gallery.html" class="text-theme-colour/60 hover:text-white py-2 border-b border-theme-colour/20">
+          GALLERY
+        </a>
+        <a href="#" class="text-theme-colour hover:text-white py-2">
+          CONTACT
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Hero -->
+    <section class="relative py-20 md:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550256076-d020098335b5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 z-0"></div>
+      <div class="relative z-10 text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold uppercase mb-6 tracking-tighter">
+          <span class="text-white">Request</span> <span class="text-theme-colour">Deployment</span>
+        </h1>
+        <p class="text-lg md:text-xl text-theme-colour/80 mb-6 leading-relaxed">
+          Contact our tactical response team for wild hog eradication services or emergency pest control.
+        </p>
+      </div>
+    </section>
+
+    <div id="error-popup" class="bg-black fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+      <div class="bg-black-ops border-2 border-theme-colour/80 max-w-md w-full p-8 relative">
+        <button id="close-popup" class="absolute top-4 right-4 text-theme-colour hover:text-white">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="text-center">
+          <i class="fas fa-robot text-4xl text-theme-colour mb-4"></i>
+          <h3 class="text-white text-xl font-bold mb-2">Verification Failed</h3>
+          <p class="text-theme-colour/80 mb-6">Please answer the math question correctly to prove you are human.</p>
+          <button id="popup-ok" class="px-6 py-2 bg-theme-colour text-black-ops font-bold uppercase tracking-wider hover:bg-white transition-all">
+            UNDERSTOOD
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Grid -->
+    <div class="grid md:grid-cols-2 gap-12 mb-20">
+      <!-- Contact Form -->
+      <div class="border border-theme-colour/20 p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">Send Mission Brief</h2>
+        <form id="contact-form">
+          <div class="mb-6">
+            <label for="name" class="block text-theme-colour/80 mb-2">Your Name</label>
+            <input type="text" id="name" class="w-full bg-black-ops border border-theme-colour/30 focus:border-theme-colour/50 px-4 py-3 text-white outline-none transition-all">
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block text-theme-colour/80 mb-2">Email Address</label>
+            <input type="email" id="email" class="w-full bg-black-ops border border-theme-colour/30 focus:border-theme-colour/50 px-4 py-3 text-white outline-none transition-all">
+          </div>
+          <div class="mb-6">
+            <label for="phone" class="block text-theme-colour/80 mb-2">Phone Number</label>
+            <input type="tel" id="phone" class="w-full bg-black-ops border border-theme-colour/30 focus:border-theme-colour/50 px-4 py-3 text-white outline-none transition-all">
+          </div>
+          <div class="mb-6">
+            <label for="service" class="block text-theme-colour/80 mb-2">Service Needed</label>
+            <select id="service" class="w-full bg-black-ops border border-theme-colour/30 focus:border-theme-colour/50 px-4 py-3 text-white outline-none transition-all">
+              <option value="">Select Service</option>
+              <option value="night-ops">Night Vision Operations</option>
+              <option value="thermal">Thermal Imaging Hunts</option>
+              <option value="prevention">Prevention Systems</option>
+              <option value="emergency">Emergency Response</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-theme-colour/80 mb-2">Mission Details</label>
+            <textarea id="message" rows="4" class="w-full bg-black-ops border border-theme-colour/30 focus:border-theme-colour/50 px-4 py-3 text-white outline-none transition-all"></textarea>
+          </div>
+          <div class="mb-6">
+            <label for="human_check" class="block text-theme-colour/80 mb-2">What is 3 + 5? (Anti-bot)</label>
+            <input type="text" id="human_check" name="human_check" class="w-full bg-black-ops border border-theme-colour/30 focus:border-theme-colour/50 px-4 py-3 text-white outline-none transition-all" required>
+          </div>
+          <button type="submit" class="w-full py-4 bg-theme-colour text-black-ops font-bold uppercase tracking-wider hover:bg-white transition-all duration-300">
+            Submit Briefing
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <div class="border border-theme-colour/20 p-8 mb-8">
+          <h2 class="text-2xl font-bold text-white mb-6">Command Center</h2>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="text-theme-colour mr-4 mt-1">
+                <i class="fas fa-phone-alt text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold mb-1">Emergency Dispatch</h3>
+                <p class="text-theme-colour/80">Available 24/7 for immediate threats</p>
+                <a href="tel:0422233292" class="text-theme-colour hover:text-white text-lg font-bold mt-2 inline-block">0422 233 292</a>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="text-theme-colour mr-4 mt-1">
+                <i class="fas fa-envelope text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold mb-1">Email HQ</h3>
+                <p class="text-theme-colour/80">For general inquiries and quotes</p>
+                <a href="mailto:contact@ontargetvarmints.com" class="text-theme-colour hover:text-white text-lg font-bold mt-2 inline-block">contact@ontargetvarmints.com</a>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="text-theme-colour mr-4 mt-1">
+                <i class="fas fa-map-marker-alt text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold mb-1">Operational Area</h3>
+                <p class="text-theme-colour/80">Serving Queensland and surrounding regions</p>
+                <p class="text-theme-colour/60 mt-2">Mobile units deployed as needed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response Time -->
+        <div class="border border-theme-colour/20 p-8">
+          <h2 class="text-2xl font-bold text-white mb-6">Response Protocol</h2>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-theme-colour/10 rounded-full flex items-center justify-center mr-4 text-theme-colour">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold">Emergency Calls</h3>
+                <p class="text-theme-colour/80">Same-night response when possible</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-theme-colour/10 rounded-full flex items-center justify-center mr-4 text-theme-colour">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold">Standard Inquiries</h3>
+                <p class="text-theme-colour/80">Response within 24 business hours</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-theme-colour/10 rounded-full flex items-center justify-center mr-4 text-theme-colour">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold">Service Scheduling</h3>
+                <p class="text-theme-colour/80">Next available slot typically within 72 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Area Map -->
+    <section class="py-16 border-t border-theme-colour/20">
+      <div class="text-center mb-12">
+        <span class="text-theme-colour uppercase tracking-widest text-sm">Operational Coverage</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-4">Service <span class="text-theme-colour">Area</span></h2>
+      </div>
+      <div class="border border-theme-colour/20 h-96 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=Queensland&zoom=7&size=1200x600&maptype=roadmap&key=YOUR_API_KEY&style=feature:all|element:labels|visibility:off&style=feature:administrative|element:geometry.stroke|color:0x00eaff')] bg-cover bg-center">
+        <!-- Replace with actual Google Maps embed or image -->
+        <div class="h-full flex items-center justify-center bg-black-ops/70">
+          <div class="text-center p-8">
+            <h3 class="text-2xl font-bold text-white mb-4">Queensland & Northern NSW</h3>
+            <p class="text-theme-colour/80 mb-6">Mobile units deploy throughout the region with priority service to affected farmlands.</p>
+            <a href="#" class="inline-block px-8 py-3 border border-theme-colour text-theme-colour hover:bg-theme-colour/10 transition-all">
+              Check Coverage Area By Contacting Us <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-black-ops to-tactical-gray border-y border-theme-colour/20">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          <span class="text-theme-colour">Under Attack By</span> <span class="text-white">Wild Pests?</span>
+        </h2>
+        <p class="text-theme-colour/80 mb-8 text-lg">
+          Don't wait - our rapid response team can be deployed immediately to protect your property.
+        </p>
+        <a href="tel:0422233292" class="inline-block px-10 py-4 bg-theme-colour text-black-ops font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 shadow-lg shadow-theme-colour/30 hover:shadow-theme-colour/50">
+          <i class="fas fa-phone-alt mr-2"></i> Call for Immediate Support
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-theme-colour/20">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">On Target Varmint Solutions</h3>
+          <p class="text-theme-colour/60">Specialised wild animal eradication using military tactics and technology.</p>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">SERVICES</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Night Hunts</a></li>
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Thermal Tracking</a></li>
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Prevention</a></li>
+            <li><a href="#" class="text-theme-colour/60 hover:text-theme-colour">Emergency Dispatch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">CONTACT</h3>
+          <ul class="space-y-2">
+            <li class="text-theme-colour/60">0422 233 292</li>
+            <li class="text-theme-colour/60">contact@ontargetvarmints.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">FOLLOW US</h3>
+          <div class="flex space-x-4">
+            
+            <a href="https://www.instagram.com/on_targetvarmintsolutions?igsh=d2VjOWVxdjl1anZk" class="text-theme-colour/60 hover:text-theme-colour text-xl"><i class="fab fa-instagram"></i></a>
+           
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-theme-colour/40 text-sm">
+        <a href="https://nexawebdev.com">
+          © 2023 POWERED BY NEXA WEB. ALL RIGHTS RESERVED.
+        </a>
+      </div>
+    </footer>
+  </div>
+
+ 
+  
+  <script>
+  const form = document.getElementById('contact-form');
+  const errorPopup = document.getElementById('error-popup');
+  const closePopup = document.getElementById('close-popup');
+  const popupOk = document.getElementById('popup-ok');
+  
+  form.addEventListener('submit', function(e) {
+    const humanAnswer = document.getElementById('human_check').value.trim();
+  
+    if (humanAnswer !== '8') {
+      e.preventDefault();
+      // Show our custom popup instead of alert
+      errorPopup.classList.remove('hidden');
+      // Focus on the math question field
+      document.getElementById('human_check').focus();
+    }
+  });
+  
+  // Close popup when clicking X or OK button
+  [closePopup, popupOk].forEach(btn => {
+    btn.addEventListener('click', () => {
+      errorPopup.classList.add('hidden');
+    });
+  });
+  
+  // Also close when clicking outside the popup
+  errorPopup.addEventListener('click', (e) => {
+    if (e.target === errorPopup) {
+      errorPopup.classList.add('hidden');
+    }
+  });
+</script>
+
+</body>
+</html>
